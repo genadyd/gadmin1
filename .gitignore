@@ -2,3 +2,4 @@
 venv
 doc.txt
 gadmin1/__pycache__/
+db.sqlite3

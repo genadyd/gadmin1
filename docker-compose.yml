@@ -8,3 +8,43 @@ services:
       - .:/code
     ports:
       - "8181:8181"
+    networks:
+      local:
+    depends_on:
+      - db
+
+    # The Database
+  db:
+    container_name: mysql_database_gadmin
+    image: mysql:5.7
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456."
+    ports:
+      - 3309:3306
+
+  phpmygadmin:
+    image: phpmyadmin:latest
+    container_name: phpgadmin
+    networks:
+      - local
+    restart: always
+    environment:
+      PMA_HOST: db
+    ports:
+      - "8282:80"
+    links:
+      - db
+    depends_on:
+      - db
+
+volumes:
+  dbdata: {}
+
+networks:
+  local:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.1.0/24
