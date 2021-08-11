@@ -1,3 +1,5 @@
 db:
    shell: docker exec -it mysql_database_gadmin mysql -u<dbuser> -p<password>
    !!! check connection url
+django:
+   bash: docker exec -it gadmin1_gadmin_1 bash -l

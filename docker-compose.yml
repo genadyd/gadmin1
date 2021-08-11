@@ -21,23 +21,23 @@ services:
       - dbdata:/var/lib/mysql
     environment:
       - "MYSQL_ROOT_PASSWORD=123456."
+      - "MYSQL_HOST=localhost"
     ports:
       - 3309:3306
 
   phpmygadmin:
-    image: phpmyadmin:latest
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin:latest
     container_name: phpgadmin
-    networks:
-      - local
     restart: always
     environment:
-      PMA_HOST: db
+         PMA_HOST: db
     ports:
       - "8282:80"
     links:
       - db
-    depends_on:
-      - db
+
 
 volumes:
   dbdata: {}
@@ -46,5 +46,3 @@ networks:
   local:
     ipam:
       driver: default
-      config:
-        - subnet: 10.0.1.0/24
