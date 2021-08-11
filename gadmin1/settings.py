@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gadmin_app'
 ]
 
 MIDDLEWARE = [
@@ -46,8 +47,8 @@ ROOT_URLCONF = 'gadmin1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates', 'gadmin_app/templates'],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
