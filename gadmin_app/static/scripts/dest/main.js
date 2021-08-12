@@ -5,6 +5,6 @@ class Main {
     }
 }
 const main = new Main();
-main.index('RRRRRR');
+main.index('RRRAAAAA');
 const custom = new Custom();
 console.log(custom.getsomeThind());

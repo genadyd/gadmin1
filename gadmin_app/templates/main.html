@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
 {% block description %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
+<link href="{% static 'styles/assets/main.scss' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
 {% include 'layouts/header/header.html' %}
 {% block content %}{% endblock %}
 </div>
-<script src="{% static 'scripts/dist/main.js'%}" type="module"></script>
+<script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
 </body>
 </html>
