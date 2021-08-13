@@ -1,19 +1,18 @@
-const {src, dest} = require('gulp')
+const {src, dest, watch} = require('gulp')
 const scss = require('gulp-sass')(require('sass'))
-const watch = require('gulp-watch')
+// scss.compiller = require('node-sass')
 
-function sass() {
-  return src('./styles/assets/*.scss')
+
+function compile_scss() {
+  return src(['./styles/assets/**/*.scss'])
     .pipe(scss().on('error', scss.logError))
-    .pipe(dest('./styles/dest'))
+    .pipe(dest('./styles/dest/'))
 }
 
-exports.sass = sass
+
 
 function watch_scss(){
-  watch('./styles/assets/*.scss', ['sass']).on('change', ()=>{
-    sass()
-  });
-};
-exports.sass = sass
+  watch('./styles/assets/', compile_scss)
+}
+exports.compile_scss = compile_scss
 exports.watch_scss = watch_scss

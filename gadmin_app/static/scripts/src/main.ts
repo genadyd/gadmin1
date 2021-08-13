@@ -6,6 +6,8 @@ class Main{
     }
 }
 const main = new Main()
-main.index('RRRAAAAA')
+// main.index('WWWWWW')
+const headerText:Element|null = document.querySelector('#main_header h2')
+if(headerText) headerText.innerHTML = 'blabla'
 const custom = new Custom()
 console.log(custom.getsomeThind())
