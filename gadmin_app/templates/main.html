@@ -3,14 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 {% block description %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
 <link href="{% static 'styles/dest/main.css' %}" rel="stylesheet" type="text/css" />
 <script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
 </head>
 <body>
-<div id="wrapper" class="container">
-{% include 'layouts/header/header.html' %}
+<div id="wrapper" class="container-fluid">
+{% include  'layouts/header/header.html' %}
 {% block content %}{% endblock %}
 </div>
 

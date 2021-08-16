@@ -1,8 +1,13 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-body{
-  background-color: #f5ecec;
+ html, body{
   margin: 0;
   padding: 0;
-  font-size: 2em;
-  color: #2f2929;
+  min-height: 100vh;
+  min-width: 100vw;
+   position: relative;
+  #wrapper{
+    min-height: 100vh;
+    position: relative;
+    @import "main_header";
+  }
 }
