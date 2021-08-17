@@ -4,10 +4,11 @@
   padding: 0;
   min-height: 100vh;
   min-width: 100vw;
-   position: relative;
-  #wrapper{
-    min-height: 100vh;
-    position: relative;
-    @import "main_header";
-  }
+   #main {
+     @import "components/main_header";
+     #wrapper {
+       min-height: calc( 100vh - 60px );
+       position: relative;
+     }
+   }
 }

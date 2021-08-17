@@ -12,9 +12,14 @@
 <script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
 </head>
 <body>
-<div id="wrapper" class="container-fluid">
+<div id="main">
 {% include  'layouts/header/header.html' %}
-{% block content %}{% endblock %}
+<div id="wrapper">
+  {% block content %}{% endblock %}
+</div>
+<div id="footer">
+
+</div>
 </div>
 
 </body>

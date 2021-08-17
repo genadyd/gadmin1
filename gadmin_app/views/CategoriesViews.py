@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.views import View
 
-from gadmin_app.controllers.CategoriesController import CategoriesController
+from gadmin_app.controllers.Modules.CategoriesController import CategoriesController
 
 
 class CategoriesViews(View):
