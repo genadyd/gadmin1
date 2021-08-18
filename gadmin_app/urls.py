@@ -1,8 +1,12 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views.CategoriesViews import CategoriesViews
+from .views.ContentViews import ContentViews
+from .views.DashboardViews import DashboardViews
 
-categories_views = CategoriesViews
+pattern = '[\w]*$|^[\w]*$'
 
 urlpatterns = [
-    path('categories/', categories_views.as_view()),
+    re_path(r'categories/' + pattern, CategoriesViews.as_view()),
+    re_path(r'content/' + pattern, ContentViews.as_view()),
+    re_path(r'^dashboard/' + pattern, DashboardViews.as_view()),
 ]

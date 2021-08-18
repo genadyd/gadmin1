@@ -9,7 +9,9 @@
 {% block description %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
 <link href="{% static 'styles/dest/main.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static styles_url %}" rel="stylesheet" type="text/css" />
 <script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
+<script src="{% static scripts_url %}" type="module"></script>
 </head>
 <body>
 <div id="main">
