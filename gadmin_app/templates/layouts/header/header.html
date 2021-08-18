@@ -1,11 +1,21 @@
+{% load static %}
 <div id="main_header" class="d-flex bg-white">
-  <div class="module_title">
-      <h1>{{ module_title }}</h1>
-  </div>
-    <div id="header_search_form">
+    <div class="module_title">
+        <h1>{{ module_title }}</h1>
+    </div>
+    <div class="header_search_form">
         <input class="form-control" type="text" placeholder="Search" aria-label="gadmin-search">
         <div class="search_button">
             <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <div class="right_area d-flex">
+        <div class="login_buttons_place ">
+            <button type="button" class="sign_in_button btn btn-outline-primary">SignIn</button>
+            <button type="button" class="sign_up_button btn btn-outline-secondary">SignUp</button>
+        </div>
+        <div class="logo_place">
+            <img src="{% static 'images/logo.png' %}" width="50px" alt="logo">
         </div>
     </div>
 </div>

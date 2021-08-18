@@ -3,26 +3,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-{% block description %}{% endblock %}
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    {% block description %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
-<link href="{% static 'styles/dest/main.css' %}" rel="stylesheet" type="text/css" />
-<link href="{% static styles_url %}" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
-<script src="{% static scripts_url %}" type="module"></script>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'styles/dest/main.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static styles_url %}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
+    <script src="{% static scripts_url %}" type="module"></script>
 </head>
 <body>
 <div id="main">
-{% include  'layouts/header/header.html' %}
-<div id="wrapper">
-  {% block content %}{% endblock %}
-</div>
-<div id="footer">
+    {% include  'layouts/header/header.html' %}
+    <div id="wrapper">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="footer">
 
-</div>
+    </div>
 </div>
 
 </body>

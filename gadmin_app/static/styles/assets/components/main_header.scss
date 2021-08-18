@@ -11,7 +11,7 @@
       font-size: 2rem;
     }
   }
-  #header_search_form{
+  .header_search_form{
     position: relative;
     .search_button{
       position: absolute;
@@ -20,6 +20,13 @@
       cursor:pointer;
       opacity: .5;
 
+    }
+  }
+  .right_area{
+    align-items: center;
+    .login_buttons_place {
+      margin-right: 1em;
+      height: min-content;
     }
   }
 
