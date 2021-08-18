@@ -1,0 +1,30 @@
+#side_bar_container {
+  width: 16vw;
+  height: calc(100vh - 64px);
+  box-shadow: 2px 3px 7px #212121;
+  background-color: #787878;
+  color: #fff;
+  padding: 1em 1em;
+  .menu_area {
+    .one_menu_element {
+      display: flex;
+      height: 3em;
+      font-size: 1.2em;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px #fff;
+      .left_side {
+        display: flex;
+        align-items: center;
+        .icon_area{
+          margin: 0 .5em;
+          font-size: 1.5em;
+          i{
+            text-shadow: 1px 1px 3px #000000;
+          }
+        }
+      }
+
+    }
+  }
+}

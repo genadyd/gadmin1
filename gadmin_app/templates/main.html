@@ -11,8 +11,9 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <link href="{% static 'styles/dest/main.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static styles_url %}" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+{#    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"#}
+{#          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>#}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="{% static 'scripts/dest/main.js' %}" type="module"></script>
     <script src="{% static scripts_url %}" type="module"></script>
 </head>
@@ -20,6 +21,7 @@
 <div id="main">
     {% include  'layouts/header/header.html' %}
     <div id="wrapper">
+        {% include 'layouts/sidebar/sidebar.html' %}
         {% block content %}{% endblock %}
     </div>
     <div id="footer">

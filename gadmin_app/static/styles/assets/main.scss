@@ -7,9 +7,10 @@
    #main {
      @import "components/main_header";
      #wrapper {
+       @import "components/sidebar";
        min-height: calc( 100vh - 64px );
        position: relative;
-      
+
      }
    }
 }
