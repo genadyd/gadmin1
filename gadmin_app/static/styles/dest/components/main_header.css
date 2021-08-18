@@ -1,1 +1,1 @@
-#main_header{height:60px;box-shadow:2px 2px 7px #393939}
+#main_header{height:64px;box-shadow:2px 2px 7px #393939;padding:0 1em;align-items:center;justify-content:space-between}#main_header .module_title{height:min-content}#main_header .module_title h1{margin:0;font-size:2rem}#main_header #header_search_form{position:relative}#main_header #header_search_form .search_button{position:absolute;top:6px;right:11px;cursor:pointer;opacity:.5}

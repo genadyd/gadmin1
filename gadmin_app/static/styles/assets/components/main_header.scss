@@ -1,5 +1,26 @@
 #main_header{
-  height: 60px;
+  height: 64px;
   box-shadow: 2px 2px 7px #393939;
+  padding: 0 1em;
+  align-items: center;
+  justify-content: space-between;
+  .module_title{
+    height: min-content;
+    h1{
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
+  #header_search_form{
+    position: relative;
+    .search_button{
+      position: absolute;
+      top: 6px;
+      right: 11px;
+      cursor:pointer;
+      opacity: .5;
+
+    }
+  }
 
 }
