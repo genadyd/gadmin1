@@ -24,7 +24,26 @@
           }
         }
       }
-
     }
+  }
+  &.collapsed{
+    width: 64px;
+    .menu_area{
+      .one_menu_element{
+        .left_side {
+          .icon_area{
+            margin: 0;
+            font-size: 1.6em;
+          }
+          .main_element_text{
+            display: none;
+          }
+        }
+        .open_close_sub_menu{
+          display: none;
+        }
+      }
+    }
+
   }
 }

@@ -1,13 +1,10 @@
-import Custom from "./custom.js";
+import Sidebar from "./components/sidebar/sidebar.js";
 class Main {
+    constructor() {
+        this.sidebar = new Sidebar();
+    }
     index(name) {
         alert(`Hello ${name}`);
     }
 }
 const main = new Main();
-// main.index('WWWWWW')
-const headerText = document.querySelector('#main_header h2');
-if (headerText)
-    headerText.innerHTML = 'Genady';
-const custom = new Custom();
-console.log(custom.getsomeThind());

@@ -1,16 +1,23 @@
 {% load static %}
-<div id="main_header" class="d-flex bg-white">
-    <div class="module_title">
-        <h1>{{ module_title }}</h1>
+<div id="main_header" class="d-flex bg-white justify-content-between align-items-center">
+    <div class="left_area d-flex justify-content-between align-items-center">
+        <div class="menu_open_button">
+            <div class="button_line top_line"></div>
+            <div class="button_line middle_line"></div>
+            <div class="button_line bottom_line"></div>
+        </div>
+        <div class="module_title">
+            <h1>{{ module_title }}</h1>
+        </div>
     </div>
+
     <div class="header_search_form">
         <input class="form-control" type="text" placeholder="Search" aria-label="gadmin-search">
         <div class="search_button">
             <span class="bi bi-search"></span>
-
         </div>
     </div>
-    <div class="right_area d-flex">
+    <div class="right_area d-flex justify-content-between align-items-center">
         <div class="login_buttons_place ">
             <button type="button" class="sign_in_button btn btn-outline-primary">SignIn</button>
             <button type="button" class="sign_up_button btn btn-outline-secondary">SignUp</button>

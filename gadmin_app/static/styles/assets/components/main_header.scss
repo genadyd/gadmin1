@@ -1,14 +1,78 @@
+@import "../keyframes/sidebar_animations";
 #main_header{
   height: 64px;
   box-shadow: 2px 2px 7px #393939;
   padding: 0 1em;
-  align-items: center;
-  justify-content: space-between;
-  .module_title{
-    height: min-content;
-    h1{
-      margin: 0;
-      font-size: 2rem;
+  .left_area {
+    .menu_open_button{
+      width: 30px;
+      height: 26px;
+      position: relative;
+      cursor: pointer;
+      &:hover{
+        .button_line{
+          background-color: #7b7b7b;
+        }
+      }
+      .button_line{
+        width: 90% ;
+        height: 5px;
+        background-color: #000;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        &.top_line{
+          top: 0;
+        }
+        &.bottom_line{
+          bottom: 0;
+        }
+        &.middle_line{
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+      }
+      &.menu_collapsed{
+        .top_line{
+          animation: line_top_norm;
+          animation-duration: .3s;
+        }
+        .bottom_line{
+          animation: line_bottom_norm;
+          animation-duration: .3s;
+        }
+        .middle_line{
+          animation: line_show;
+          animation-duration: .3s;
+        }
+      }
+      &.menu_not_collapsed{
+         .middle_line{
+           width: 0;
+           animation: line_collapse;
+           animation-duration: .3s;
+         }
+        .top_line{
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%) rotate(45deg);
+          animation: line_top;
+          animation-duration: .3s;
+        }
+        .bottom_line{
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+          animation: line_bottom;
+          animation-duration: .3s;
+        }
+      }
+    }
+    .module_title {
+      height: min-content;
+      margin-left: 1em;
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
     }
   }
   .header_search_form{
@@ -19,15 +83,12 @@
       right: 11px;
       cursor:pointer;
       opacity: .5;
-
     }
   }
   .right_area{
-    align-items: center;
     .login_buttons_place {
       margin-right: 1em;
       height: min-content;
     }
   }
-
 }
