@@ -1,4 +1,5 @@
 #side_bar_container {
+  transition: width .5s linear;
   width: 16vw;
   height: calc(100vh - 64px);
   box-shadow: 2px 3px 7px #212121;
@@ -28,19 +29,24 @@
   }
   &.collapsed{
     width: 64px;
+    transition: width .5s linear;
     .menu_area{
       .one_menu_element{
         .left_side {
           .icon_area{
-            margin: 0;
+            margin-left: 0;
+            margin-right: 0;
             font-size: 1.6em;
+            transition: margin-right 2s linear;
           }
           .main_element_text{
-            display: none;
+            transition: opacity .5s linear ;
+            opacity: 0;
           }
         }
         .open_close_sub_menu{
-          display: none;
+          transition: opacity .5s linear ;
+            opacity: 0;
         }
       }
     }

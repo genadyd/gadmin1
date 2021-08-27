@@ -9,13 +9,21 @@ class Sidebar {
         menuOpenButton?.addEventListener('click', this.sideBarOpenCollapseHandler)
     }
 
-    private sideBarOpenCollapseHandler(this: any) {
+    private sideBarOpenCollapseHandler(this:any) {
         if (this.classList.contains('menu_not_collapsed')) {
             this.classList.remove('menu_not_collapsed')
             this.classList.add('menu_collapsed')
         } else {
             this.classList.add('menu_not_collapsed')
             this.classList.remove('menu_collapsed')
+        }
+        const sidePanel = document.querySelector('#side_bar_container')
+        if(sidePanel?.classList.contains('collapsed')){
+            sidePanel.classList.remove('collapsed')
+            sidePanel.classList.add('not_collapsed')
+        }else{
+            sidePanel?.classList.add('collapsed')
+            sidePanel?.classList.remove('not_collapsed')
         }
     }
 }
