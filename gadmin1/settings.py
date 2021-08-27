@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gadmin_app'
+    'gadmin_app',
+    'gadmin_api'
 ]
 
 MIDDLEWARE = [
