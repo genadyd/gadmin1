@@ -7,6 +7,6 @@ node_modules
 gadmin_app/__pycache__/
 gadmin_app/controllers/__pycache__/
 gadmin_app/migrations/__pycache__/
-gadmin_app/views/__pyca
+gadmin_app/views/__pycache__/
 gadmin_app/static/styles/dest
 gadmin_app/static/scripts/dest/
