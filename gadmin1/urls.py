@@ -13,10 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, include
+
+'''test function "in production must be removed"'''
+def static_text(s):
+    return lambda req: HttpResponse(s)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('gadmin/', include('gadmin_app.urls')),
+    path('gadmin/api-auth/', include('rest_framework.urls')),
+    path('gadmin/api/', include('gadmin_api.urls')),
+    path('gadmin/', include('gadmin_app.urls'))
 ]
