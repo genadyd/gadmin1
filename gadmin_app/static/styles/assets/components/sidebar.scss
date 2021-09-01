@@ -6,7 +6,9 @@
   background-color: #787878;
   color: #fff;
   padding: 1em 1em;
+  overflow: hidden;
   .menu_area {
+    width: calc(16vw - 2em) ;
     .one_menu_element {
       display: flex;
       height: 3em;
@@ -14,6 +16,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: solid 1px #fff;
+
       .left_side {
         display: flex;
         align-items: center;
@@ -29,8 +32,9 @@
   }
   &.collapsed{
     width: 64px;
-    transition: width .5s linear;
+    transition: width .3s linear;
     .menu_area{
+      width: 100%;
       .one_menu_element{
         .left_side {
           .icon_area{
@@ -40,7 +44,6 @@
             transition: margin-right 2s linear;
           }
           .main_element_text{
-            transition: opacity .5s linear ;
             opacity: 0;
           }
         }
