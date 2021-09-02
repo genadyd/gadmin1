@@ -9,7 +9,7 @@ from gadmin_app.models import MainMenuCategory
 
 class MainMenuCategoriesView(APIView):
     def get(self, request):
-        pprint('jhjhjkhkh')
+
         categories = MainMenuCategory.objects.all()
         serialized_data = MainMenuCategoriesSerializer(categories, many=True)
 
