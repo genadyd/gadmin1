@@ -1,11 +1,10 @@
-import MainMenuData from "./main_menu/MainMenuData.js";
+import MainMenu from "./main_menu/main_menu.js";
 
 class Sidebar {
-    private mainMenu
+    private mainMenu:any = new MainMenu()
     constructor() {
         this.openCollapse()
-        this.mainMenu = new MainMenuData()
-        this.mainMenuCategoriesBuild()
+        this.mainMenu.mainMenuCategoriesBuild()
     }
 
     private openCollapse(): void {
@@ -14,7 +13,7 @@ class Sidebar {
         menuOpenButton?.addEventListener('click', this.sideBarOpenCollapseHandler)
     }
 
-    private sideBarOpenCollapseHandler(this:any) {
+    private sideBarOpenCollapseHandler(this:any):void {
         if (this.classList.contains('menu_not_collapsed')) {
             this.classList.remove('menu_not_collapsed')
             this.classList.add('menu_collapsed')
@@ -30,9 +29,6 @@ class Sidebar {
             sidePanel?.classList.add('collapsed')
             sidePanel?.classList.remove('not_collapsed')
         }
-    }
-    private mainMenuCategoriesBuild(){
-        this.mainMenu.getMainMenuCategoriesData()
     }
 }
 

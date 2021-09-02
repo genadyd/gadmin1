@@ -7,49 +7,72 @@
   color: #fff;
   padding: 1em 1em;
   overflow: hidden;
+
   .menu_area {
-    width: calc(16vw - 2em) ;
+    width: calc(16vw - 2em);
+
     .one_menu_element {
-      display: flex;
       height: 3em;
       font-size: 1.2em;
-      justify-content: space-between;
-      align-items: center;
       border-bottom: solid 1px #fff;
 
-      .left_side {
+      .inner {
+        width: 100%;
+        height: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        .icon_area{
-          margin: 0 .5em;
-          font-size: 1.5em;
-          i{
-            text-shadow: 1px 1px 3px #000000;
+
+        .left_side {
+          display: flex;
+          align-items: center;
+
+          .icon_area {
+            margin: 0 .5em;
+            font-size: 1.5em;
+            i {
+              text-shadow: 1px 1px 3px #000000;
+            }
           }
+          .main_element_text{
+            cursor: default;
+            &:hover{
+              text-shadow: 1px 1px 3px #000000;
+            }
+          }
+        }
+        .open_close_sub_menu{
+          text-shadow: 1px 1px 3px #000000;
         }
       }
     }
   }
-  &.collapsed{
+
+  &.collapsed {
     width: 64px;
     transition: width .3s linear;
-    .menu_area{
+
+    .menu_area {
       width: 100%;
-      .one_menu_element{
-        .left_side {
-          .icon_area{
-            margin-left: 0;
-            margin-right: 0;
-            font-size: 1.6em;
-            transition: margin-right 2s linear;
+
+      .one_menu_element {
+        .inner {
+          .left_side {
+            .icon_area {
+              margin-left: 0;
+              margin-right: 0;
+              font-size: 1.6em;
+              transition: margin-right 2s linear;
+            }
+
+            .main_element_text {
+              opacity: 0;
+            }
           }
-          .main_element_text{
+          .open_close_sub_menu {
+            transition: opacity .5s linear;
             opacity: 0;
           }
-        }
-        .open_close_sub_menu{
-          transition: opacity .5s linear ;
-            opacity: 0;
         }
       }
     }

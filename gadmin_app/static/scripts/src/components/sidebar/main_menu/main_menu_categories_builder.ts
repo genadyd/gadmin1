@@ -3,14 +3,19 @@ export function categoriesListBuilder(data: any) {
     data.forEach(oneCat => {
         categoriesListHtml += `
          <div class="one_menu_element" data-main_menu_category_id="${oneCat.id}">
-             <div class="left_side">
-                <div class="icon_area">
-                  <i class="bi bi-truck"></i>
-                </div>
-                <div class="main_element_text">${oneCat.title}</div>
+             <div class="inner">
+                   <div class="left_side">
+                      <div class="icon_area">
+                        <i class="${oneCat.icon}"></i>
+                      </div>
+                      <div class="main_element_text">${oneCat.title}</div>
+                   </div>
+                   <div class="open_close_sub_menu">
+                      <i class="bi bi-caret-down-fill"></i>
+                   </div>
              </div>
          </div>
          `
     })
-   return categoriesListHtml
+    return categoriesListHtml
 }
