@@ -14,6 +14,7 @@ export function categoriesListBuilder(data: any) {
                       <i class="bi bi-caret-down-fill"></i>
                    </div>
              </div>
+             <div class="links_area"></div>
          </div>
          `
     })
