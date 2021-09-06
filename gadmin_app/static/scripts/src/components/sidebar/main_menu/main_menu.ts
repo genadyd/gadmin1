@@ -1,6 +1,6 @@
 import {categoriesListBuilder} from "./builders/main_menu_categories_builder.js";
 import MainMenuData from "./MainMenuData.js";
-import {linksBuilder} from "./builders/main_menu_links_builder.js";
+import {getListByCategoriesListener} from "./main_menu_listeners.js";
 
 class MainMenu{
     private mainMenuData
@@ -23,16 +23,10 @@ class MainMenu{
              catElement.addEventListener('click',(e)=>{
                  if (catElement instanceof HTMLElement){
                      const parentId = catElement.dataset.main_menu_category_id
-                     if (parentId){
-                         this.mainMenuData.getMainMenuLinksData(+parentId).then(result => {
-                             const linksArea = catElement.querySelector('.links_area')
-                             if (linksArea) linksArea.innerHTML = linksBuilder(result)
-                         })
-                     }
+                     getListByCategoriesListener(catElement, this.mainMenuData)
                  }
              })
          }
-
      }
 }
 export default MainMenu
