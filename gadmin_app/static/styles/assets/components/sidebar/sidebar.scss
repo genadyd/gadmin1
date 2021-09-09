@@ -51,11 +51,9 @@
       }
 
       .links_area {
-        display: none;
-      }
-       &.links_area_show {
-      .links_area {
-        display: block;
+        max-height: 0;
+        overflow: hidden;
+
         .one_link {
           height: 2.5em;
           line-height: 2.3em;
@@ -68,20 +66,26 @@
           }
         }
       }
-    }
-    }
+      &.links_area_hidden {
+        @import "links_area_hidden";
+      }
 
-
+      &.links_area_show {
+        @import "links_area_show";
+      }
+    }
   }
 
   &.collapsed {
     width: 64px;
     transition: width .3s linear;
+    overflow: visible;
 
     .menu_area {
       width: 100%;
 
       .one_menu_element {
+        position: relative;
         .inner {
           .left_side {
             .icon_area {
@@ -99,6 +103,16 @@
           .open_close_sub_menu {
             transition: opacity .5s linear;
             opacity: 0;
+          }
+        }
+        &.links_area_show {
+        .links_area{
+            position: absolute;
+            background-color: #3a3a3a;
+            left: 66px;
+            top: 30%;
+            width: 300px;
+            max-height: min-content;
           }
         }
       }

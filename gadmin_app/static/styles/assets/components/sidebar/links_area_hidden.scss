@@ -1,0 +1,13 @@
+
+.inner {
+  .open_close_sub_menu {
+    transform: rotate(-360deg);
+    transition: .5s;
+  }
+}
+
+.links_area {
+  max-height: 0;
+  transition: max-height .5s ease 0ms;
+}
+      

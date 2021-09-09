@@ -10,7 +10,7 @@ gadmin_app/migrations/
 gadmin_api/migrations/
 gadmin_app/controllers/__pycache__/
 gadmin_app/views/__pycache__/
-gadmin_app/static/styles/dest
-gadmin_app/static/scripts/dest/
+#gadmin_app/static/styles/dest
+#gadmin_app/static/scripts/dest/
 gadmin_api/serializers/__pycache__/
 gadmin_api/views/__pycache__/

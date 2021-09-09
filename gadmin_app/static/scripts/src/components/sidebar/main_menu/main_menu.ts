@@ -1,9 +1,10 @@
-import {categoriesListBuilder} from "./builders/main_menu_categories_builder.js";
+
 import MainMenuData from "./MainMenuData.js";
+import {categoriesListBuilder} from "./builders/main_menu_categories_builder.js";
 import {getListByCategoriesListener} from "./main_menu_listeners.js";
 
 class MainMenu{
-    private mainMenuData
+    private readonly mainMenuData
     constructor() {
         this.mainMenuData = new MainMenuData()
     }
