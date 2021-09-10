@@ -101,8 +101,7 @@
           }
 
           .open_close_sub_menu {
-            transition: opacity .5s linear;
-            opacity: 0;
+            display: none;
           }
         }
         &.links_area_show {
