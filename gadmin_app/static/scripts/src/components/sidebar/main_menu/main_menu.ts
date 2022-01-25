@@ -12,7 +12,7 @@ class MainMenu{
         this.mainMenuData.getMainMenuCategoriesData().then(result => {
             const mainMenuContainer = document.querySelector('#side_bar_container .menu_area')
             if (mainMenuContainer && result) {
-                mainMenuContainer.innerHTML = categoriesListBuilder(result)
+                mainMenuContainer.innerHTML = categoriesListBuilder(result.data)
                 this.getLinksByCategory()
             }
         })
@@ -23,7 +23,7 @@ class MainMenu{
          for(const catElement of menuCategoriesElements){
              catElement.addEventListener('click',(e)=>{
                  if (catElement instanceof HTMLElement){
-                     const parentId = catElement.dataset.main_menu_category_id
+                     const parentId = catElement.dataset.mainMenuCategoryId
                      getListByCategoriesListener(catElement, this.mainMenuData)
                  }
              })

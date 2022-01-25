@@ -1,8 +1,15 @@
 @import "../keyframes/sidebar_animations";
-#main_header{
-  height: 64px;
-  box-shadow: 2px 2px 7px #393939;
+@import "../vars/main_vars";
+
+#main_header {
+  height: $main-header-heigth;
   padding: 0 1em;
+  position: fixed;
+  width: 100%;
+  background: $box-color;
+  border-bottom: 1px solid $borders-color;
+  top: 0;
+  left: 0;
   .left_area {
     .menu_open_button{
       width: 30px;
@@ -71,7 +78,9 @@
       margin-left: 1em;
       h1 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $text-main-color;
       }
     }
   }
@@ -86,9 +95,16 @@
     }
   }
   .right_area{
+    position: relative;
+    height: 100%;
     .login_buttons_place {
       margin-right: 1em;
       height: min-content;
+    }
+    .logo_place{
+      img{
+        width: calc( #{$main-header-heigth} - 1em);
+      }
     }
   }
 }

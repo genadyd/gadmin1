@@ -1,14 +1,27 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "vars/main_vars";
  html, body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  min-width: 100vw;
+   #bg_dark{
+     height: 100vh;
+     width: 100vw;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background-image: url($background-image-pattern);
+     background-color: #010506;
+     opacity: .9;
+   }
    #main {
+     background: url($backgroung-image) no-repeat fixed;
+     min-height: 100vh;
+     padding-top:$main-header-heigth ;
      @import "components/main_header";
      #wrapper {
        @import "components/sidebar/sidebar";
-       min-height: calc( 100vh - 64px );
+       min-height: calc( 100vh - #{$main-header-heigth} );
        position: relative;
      }
    }

@@ -1,3 +1,5 @@
+import {getCookie} from "../../../lib/cookies.js";
+
 class MainMenuData {
     private readonly urls: any
     private readonly basicApiUrl: string
@@ -11,7 +13,9 @@ class MainMenuData {
             menuLinksList: this.basicApiUrl + 'main_menu_links/'
         }
         this.headers = {
-            'Content-Type': 'application/json'
+            "X-CSRFToken": getCookie("csrftoken"),
+            "Accept": "application/json",
+            "Content-Type": "application/json"
         }
     }
 
